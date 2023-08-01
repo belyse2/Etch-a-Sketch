@@ -1,17 +1,16 @@
-// Function to create the grid squares
 function createGrid(numSquares) {
-    const container = document.getElementById("container");
-    container.innerHTML = ""; // Clear existing grid
-  
-    container.style.width = `${numSquares * 31}px`; // Adjust container width
-  
-    for (let i = 0; i < numSquares * numSquares; i++) {
-      const square = document.createElement("div");
-      square.classList.add("square");
-      container.appendChild(square);
-    }
+  const container = document.getElementById("container");
+  container.innerHTML = ""; // Clear existing grid
+
+  container.style.width = `${numSquares * 32}px`; // Adjust container width based on square size and grid dimensions
+
+  for (let i = 0; i < numSquares * numSquares; i++) {
+    const square = document.createElement("div");
+    square.classList.add("square");
+    container.appendChild(square);
   }
-  
+}
+
   // Function to handle square hover effect
   function handleSquareHover(e) {
     const square = e.target;

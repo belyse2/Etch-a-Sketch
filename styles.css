@@ -1,14 +1,25 @@
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 480px;
-  }
-  
-  .square {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
-    box-sizing: border-box;
-  }
-  
-  
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(16, 30px); /* Set each column to 30px */
+  grid-template-rows: repeat(16, 30px); /* Set each row to 30px */
+  max-width: 480px; /* Adjust the maximum width of the container to your preference */
+  gap: 1px; /* Adjust the gap between grid squares to your preference */
+  padding: 10px; /* Add some padding around the grid */
+  border: 1px solid black; /* Add a border around the grid for better visibility */
+}
+
+.square {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black; /* Add a border around the squares for better visibility */
+}
+
